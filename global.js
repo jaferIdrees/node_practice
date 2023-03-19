@@ -7,11 +7,15 @@ const timerFinished = () => {
 
 setTimeout(timerFinished, waitTime);
 
-const waitIntreval = 600;
+const waitIntreval = 500;
 let currentTime = 0;
 
 const incTime = () => {
     currentTime += waitIntreval;
+    const p = Math.floor((currentTime / waitTime)*100);
+    process.stdout.clearLine();
+    process.stdout.cursorTo(0);
+    process.stdout.write(`waiting....${p}`);
     console.log(`waiting ${currentTime / 1000} seconds`);
 }
 

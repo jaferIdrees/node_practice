@@ -7,7 +7,7 @@ const timerFinished = () => {
 
 setTimeout(timerFinished, waitTime);
 
-const waitIntreval = 500;
+const waitIntreval = 600;
 let currentTime = 0;
 
 const incTime = () => {
